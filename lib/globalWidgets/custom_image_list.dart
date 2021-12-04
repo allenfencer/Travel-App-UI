@@ -58,7 +58,7 @@ class CustomImageList extends StatelessWidget {
                     child: Image.asset(
                       'assets/${activities[index]}',
                       fit: BoxFit.fill,
-                      color: Colors.black.withOpacity(0.1),
+                      color: Colors.black.withOpacity(0.2),
                       colorBlendMode: BlendMode.darken,
                     ),
                   ),
@@ -74,7 +74,7 @@ class CustomImageList extends StatelessWidget {
                             tag: '4.2',
                             textSize: 14,
                             icons: Icons.star,
-                            color: const Color(0xff00000026).withOpacity(0.2),
+                            color: const Color(0xff000026).withOpacity(0.2),
                             textColor: const Color(0xffffffff),
                           ),
                         ),

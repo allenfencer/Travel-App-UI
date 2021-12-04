@@ -8,7 +8,8 @@ import 'package:vcg_task1/globalWidgets/custom_text.dart';
 import 'package:vcg_task1/globalWidgets/search_icon.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  final String cityName;
+  const HomePage({Key? key,required this.cityName}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +42,7 @@ class HomePage extends StatelessWidget {
                 ],
               ),
               CustomText(
-                text: 'Amsterdam',
+                text: cityName,
                 marginBottom: 10,
                 marginTop: 0,
                 fweight: FontWeight.w600,
@@ -66,13 +67,14 @@ class HomePage extends StatelessWidget {
               Container(
                 height: 120,
                 clipBehavior: Clip.antiAlias,
-                decoration: BoxDecoration(
-                    color: Colors.amber,
-                    borderRadius: BorderRadius.circular(5)),
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(5)),
                 width: MediaQuery.of(context).size.width,
                 margin: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
                 child: Image.asset(
                   'assets/place4.png',
+                  color: Colors.black87.withOpacity(0.1),
+                  colorBlendMode: BlendMode.darken,
                   fit: BoxFit.fill,
                 ),
               )

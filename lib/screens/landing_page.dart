@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:vcg_task1/globalWidgets/custom_button.dart';
+import 'package:vcg_task1/globalWidgets/fab_expanded.dart';
 import 'package:vcg_task1/screens/explore_city_screen.dart';
 
 class LandingPage extends StatelessWidget {

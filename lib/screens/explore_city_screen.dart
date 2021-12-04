@@ -113,11 +113,11 @@ class _ExploreCityState extends State<ExploreCity> {
                 // ignore: prefer_const_literals_to_create_immutables
                 children: [
                   Text('Choose',
-                      style: TextStyle(color: Color(0xff000000), fontSize: 40)),
+                      style: TextStyle(color: Colors.black54, fontSize: 40)),
                   Text(
                     'your City',
                     style: TextStyle(
-                      color: Colors.black,
+                      color: Colors.black54,
                       fontSize: 40,
                     ),
                   ),
@@ -159,6 +159,32 @@ class _ExploreCityState extends State<ExploreCity> {
             ),
           ),
           Positioned(
+            bottom: 157,
+            left: 148,
+            child: Container(
+              height: 25,
+              width: 128,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(25),
+                color: Colors.white,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: List.generate(
+                  images.length,
+                  (indexDots) => Container(
+                    margin: EdgeInsets.only(left: 3, right: 3),
+                    width: _currentPage == indexDots ? 25 : 10,
+                    height: 10,
+                    decoration: BoxDecoration(
+                        color: const Color(0xff72978F),
+                        borderRadius: BorderRadius.circular(25)),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Positioned(
             bottom: 190,
             left: 109,
             right: 107,
@@ -178,7 +204,9 @@ class _ExploreCityState extends State<ExploreCity> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (BuildContext context) => HomePage()));
+                          builder: (BuildContext context) => HomePage(
+                                cityName: cityNames[_currentPage],
+                              )));
                 },
                 child: CustomButton(
                   buttonText: 'EXPLORE THE CITY',
