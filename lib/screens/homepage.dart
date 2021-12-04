@@ -63,6 +63,19 @@ class HomePage extends StatelessWidget {
                 textColor: Color(0xff666462),
               ),
               CustomImageList(),
+              Container(
+                height: 120,
+                clipBehavior: Clip.antiAlias,
+                decoration: BoxDecoration(
+                    color: Colors.amber,
+                    borderRadius: BorderRadius.circular(5)),
+                width: MediaQuery.of(context).size.width,
+                margin: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                child: Image.asset(
+                  'assets/place4.png',
+                  fit: BoxFit.fill,
+                ),
+              )
             ],
           ),
         ),

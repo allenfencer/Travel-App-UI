@@ -60,7 +60,7 @@ class ActivityImage extends StatelessWidget {
                 child: Tags(
                   tag: '4.2',
                   icons: Icons.star,
-                  color: const Color(0xff00000026).withOpacity(0.2),
+                  color: const Color(0xff000026).withOpacity(0.2),
                   textColor: const Color(0xffffffff),
                 ),
               ),
