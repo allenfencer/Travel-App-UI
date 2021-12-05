@@ -1,5 +1,4 @@
 // ignore_for_file: prefer_const_constructors
-import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:vcg_task1/globalWidgets/activity_image.dart';
 import 'package:vcg_task1/globalWidgets/attraction_list.dart';
@@ -16,30 +15,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      floatingActionButton: OpenContainer(
-        transitionDuration: Duration(milliseconds: 500),
-        openElevation: 0,
-        closedColor: Colors.black,
-        openColor: Colors.black,
-        closedElevation: 0,
-        clipBehavior: Clip.antiAlias,
-        closedShape:
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-        closedBuilder: (context, action) {
-          return FloatingActionButton(
-            onPressed: action,
-            backgroundColor: Colors.black,
-            elevation: 0,
-            child: Icon(
-              Icons.menu,
-              size: 28,
-            ),
-          );
-        },
-        openBuilder: (context, action) {
-          return FABExpanded();
-        },
-      ),
+      floatingActionButton: FABExpanded(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
