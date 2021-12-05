@@ -1,24 +1,44 @@
 // ignore_for_file: prefer_const_constructors
-
+import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:vcg_task1/globalWidgets/activity_image.dart';
 import 'package:vcg_task1/globalWidgets/attraction_list.dart';
 import 'package:vcg_task1/globalWidgets/custom_image_list.dart';
 import 'package:vcg_task1/globalWidgets/custom_text.dart';
+import 'package:vcg_task1/globalWidgets/fab_expanded.dart';
 import 'package:vcg_task1/globalWidgets/search_icon.dart';
 
 class HomePage extends StatelessWidget {
   final String cityName;
-  const HomePage({Key? key,required this.cityName}) : super(key: key);
+  const HomePage({Key? key, required this.cityName}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        backgroundColor: Colors.black87,
-        child: Icon(Icons.menu),
+      floatingActionButton: OpenContainer(
+        transitionDuration: Duration(milliseconds: 500),
+        openElevation: 0,
+        closedColor: Colors.black,
+        openColor: Colors.black,
+        closedElevation: 0,
+        clipBehavior: Clip.antiAlias,
+        closedShape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+        closedBuilder: (context, action) {
+          return FloatingActionButton(
+            onPressed: action,
+            backgroundColor: Colors.black,
+            elevation: 0,
+            child: Icon(
+              Icons.menu,
+              size: 28,
+            ),
+          );
+        },
+        openBuilder: (context, action) {
+          return FABExpanded();
+        },
       ),
       body: SafeArea(
         child: SingleChildScrollView(

@@ -43,6 +43,7 @@ class _AttractionListState extends State<AttractionList> {
                 decoration: BoxDecoration(
                     // ignore: prefer_const_constructors
                     color:
+                        // ignore: prefer_const_constructors
                         currIndex == index ? Color(0xffD5E5E2) : Colors.white,
                     borderRadius: BorderRadius.circular(25)),
                 child: Text(

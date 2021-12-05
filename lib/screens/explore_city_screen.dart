@@ -3,6 +3,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:vcg_task1/globalWidgets/custom_button.dart';
 import 'package:vcg_task1/globalWidgets/search_icon.dart';
 import 'package:vcg_task1/screens/homepage.dart';
@@ -57,7 +58,7 @@ class _ExploreCityState extends State<ExploreCity> {
             left: 29,
             child: Text(
               'LET\'S GO!',
-              style: TextStyle(
+              style: GoogleFonts.lato(
                   color: Color(
                     0xffEA8246,
                   ),
@@ -105,7 +106,7 @@ class _ExploreCityState extends State<ExploreCity> {
             ),
           ),
           Positioned(
-              top: 94,
+              top: 85,
               left: 27,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -113,10 +114,11 @@ class _ExploreCityState extends State<ExploreCity> {
                 // ignore: prefer_const_literals_to_create_immutables
                 children: [
                   Text('Choose',
-                      style: TextStyle(color: Colors.black54, fontSize: 40)),
+                      style: GoogleFonts.playfairDisplay(
+                          color: Colors.black54, fontSize: 40)),
                   Text(
                     'your City',
-                    style: TextStyle(
+                    style: GoogleFonts.playfairDisplay(
                       color: Colors.black54,
                       fontSize: 40,
                     ),
@@ -191,7 +193,7 @@ class _ExploreCityState extends State<ExploreCity> {
             child: Align(
               child: Text(
                 cityNames[_currentPage],
-                style: TextStyle(fontSize: 24),
+                style: GoogleFonts.lato(fontSize: 24),
               ),
             ),
           ),

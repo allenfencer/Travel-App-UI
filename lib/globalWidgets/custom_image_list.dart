@@ -35,9 +35,19 @@ class CustomImageList extends StatelessWidget {
       '3 mins',
       '25 mins',
     ];
+
+    List<String> ratings = [
+      '4.2',
+      '3.9',
+      '4.8',
+      '4.2',
+      '3.9',
+      '4.8',
+    ];
+
     return Container(
       padding: const EdgeInsets.only(left: 15),
-      height: 200,
+      height: 220,
       child: ListView.builder(
           itemCount: activities.length,
           shrinkWrap: true,
@@ -71,7 +81,7 @@ class CustomImageList extends StatelessWidget {
                           // ignore: prefer_const_constructors
                           child: Tags(
                             height: 25,
-                            tag: '4.2',
+                            tag: ratings[index],
                             textSize: 14,
                             icons: Icons.star,
                             color: const Color(0xff000026).withOpacity(0.2),

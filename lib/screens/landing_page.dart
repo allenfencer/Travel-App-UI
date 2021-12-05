@@ -1,5 +1,5 @@
 // ignore_for_file: prefer_const_constructors
-
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:vcg_task1/globalWidgets/custom_button.dart';
 import 'package:vcg_task1/globalWidgets/fab_expanded.dart';
@@ -28,7 +28,7 @@ class LandingPage extends StatelessWidget {
                 left: 29,
                 child: Text(
                   'LET\'S GO!',
-                  style: TextStyle(
+                  style: GoogleFonts.lato(
                       color: Color(
                         0xffEA8246,
                       ),
@@ -77,11 +77,11 @@ class LandingPage extends StatelessWidget {
                   // ignore: prefer_const_literals_to_create_immutables
                   children: [
                     Text('Hello,',
-                        style:
-                            TextStyle(color: Color(0xff72978F), fontSize: 45)),
+                        style: GoogleFonts.playfairDisplay(
+                            color: Color(0xff72978F), fontSize: 45)),
                     Text(
                       'Leonard!',
-                      style: TextStyle(
+                      style: GoogleFonts.playfairDisplay(
                         color: Colors.black,
                         fontSize: 45,
                       ),

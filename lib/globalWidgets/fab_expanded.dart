@@ -15,7 +15,7 @@ class FABExpanded extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
         color: Colors.black,
-        borderRadius: BorderRadius.circular(30),
+        borderRadius: BorderRadius.circular(25),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -57,7 +57,9 @@ class FABExpanded extends StatelessWidget {
                 width: 120,
               ),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pop(context);
+                },
                 child: Icon(
                   Icons.close,
                   color: Colors.white70,

@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:vcg_task1/globalWidgets/custom_text.dart';
 import 'package:vcg_task1/globalWidgets/tags.dart';
+import 'package:vcg_task1/screens/homepage.dart';
 
 class ActivityImage extends StatelessWidget {
   const ActivityImage({Key? key}) : super(key: key);
@@ -64,8 +65,42 @@ class ActivityImage extends StatelessWidget {
                   textColor: const Color(0xffffffff),
                 ),
               ),
-            ))
+            )),
+        Positioned(
+          right: 30,
+          top: 65,
+          child: clockWidget(),
+        ),
       ],
     );
   }
+}
+
+clockWidget() {
+  return Container(
+    padding: const EdgeInsets.all(10),
+    height: 90,
+    width: 80,
+    decoration: BoxDecoration(
+        color: Colors.black, borderRadius: BorderRadius.circular(7)),
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      // ignore: prefer_const_literals_to_create_immutables
+      children: [
+        const Icon(
+          Icons.watch_later_outlined,
+          color: Colors.white,
+        ),
+        const Text(
+          'Closest',
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.normal),
+        ),
+        const Text(
+          '7:35 pm',
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.normal),
+        )
+      ],
+    ),
+  );
 }
